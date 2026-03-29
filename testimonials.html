@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Gallery - MediTrust Bootstrap Template</title>
+  <title>Testimonials - MediTrust Bootstrap Template</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -37,7 +37,7 @@
   ======================================================== -->
 </head>
 
-<body class="gallery-page">
+<body class="testimonials-page">
 
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
@@ -67,14 +67,13 @@
           </g>
         </svg>
 
-        <h1 class="sitename">AlphMegan</h1>
+        <h1 class="sitename">MediTrust</h1>
       </a>
 
-      
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="admin.html">About</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="departments.html">Departments</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="doctors.html">Doctors</a></li>
@@ -83,9 +82,9 @@
               <li><a href="department-details.html">Department Details</a></li>
               <li><a href="service-details.html">Service Details</a></li>
               <li><a href="appointment.html">Appointment</a></li>
-              <li><a href="testimonials.html">Testimonials</a></li>
+              <li><a href="testimonials.html" class="active">Testimonials</a></li>
               <li><a href="faq.html">Frequently Asked Questions</a></li>
-              <li><a href="gallery.html" class="active">Gallery</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
               <li><a href="terms.html">Terms</a></li>
               <li><a href="privacy.html">Privacy</a></li>
               <li><a href="404.html">404</a></li>
@@ -96,43 +95,22 @@
               <li><a href="#">Dropdown 1</a></li>
               <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
-                  <li><a href="gallery-7.html">Kilifi</a></li>
-                  <li><a href="gallery-7.html">Mombasa</a></li>
-                  <li><a href="gallery-7.html">Nyandarua</a></li>
-                  <li><a href="gallery-7.html">Meru</a></li>
-                  <li><a href="gallery-7.html">Laikipia</a></li>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
                 </ul>
               </li>
-              <li><a href="gallery-8.html">Nakuru</a></li>
-              <li><a href="gallery-8.html">Uasin gishu</a></li>
-              <li><a href="gallery-8.html">Trans nzoia</a></li>
-              <li><a href="gallery.html">West pokot</a></li>
-              <li><a href="gallery.html">Bungoma</a></li>
-              <li><a href="gallery.html">Nandi</a></li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
             </ul>
           </li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
-      <a class="btn-getstarted" href="appointment.html">Premium</a>
-
-    </div>
-  </header>
-
-  <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title">
-      <div class="breadcrumbs">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#"><i class="bi bi-house"></i> Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Category</a></li>
-            <li class="breadcrumb-item active current">Gallery</li>
-          </ol>
-        </nav>
 
       <a class="btn-getstarted" href="appointment.html">Appointment</a>
 
@@ -148,170 +126,334 @@
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#"><i class="bi bi-house"></i> Home</a></li>
             <li class="breadcrumb-item"><a href="#">Category</a></li>
-            <li class="breadcrumb-item active current">Gallery</li>
+            <li class="breadcrumb-item active current">Testimonials</li>
           </ol>
         </nav>
       </div>
 
       <div class="title-wrapper">
-        <h1>Gallery</h1>
+        <h1>Testimonials</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
       </div>
     </div><!-- End Page Title -->
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery section">
+    <!-- Featured Testimonials Section -->
+    <section id="featured-testimonials" class="featured-testimonials section light-background">
 
-      <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-          <ul class="gallery-filters isotope-filters aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-nature">Nature</li>
-            <li data-filter=".filter-architecture">Architecture</li>
-            <li data-filter=".filter-people">People</li>
-            <li data-filter=".filter-travel">Travel</li>
-          </ul><!-- End Gallery Filters -->
+        <div class="testimonials-slider swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "slidesPerView": 1,
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "navigation": {
+                "nextEl": ".swiper-button-next",
+                "prevEl": ".swiper-button-prev"
+              }
+            }
+          </script>
 
-          <div class="row g-4 isotope-container aos-init aos-animate" data-aos="fade-up" data-aos-delay="200" style="position: relative; height: 1224px;">
-            
-              <div class="gallery-card">
-               <div class="gallery-img">
-        <video autoplay="" muted="" loop="">
-          <source src="assets/img/travel/video-14.mp4" type="video/mp4">
-        </video>
-        <div class="hero-overlay"></div>
-      </div>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="row">
+                  <div class="col-lg-8">
+                    <h2>Sed ut perspiciatis unde omnis</h2>
+                    <p>
+                      Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                    </p>
+                    <p>
+                      Beatae magnam dolore quia ipsum. Voluptatem totam et qui dolore dignissimos. Amet quia sapiente laudantium nihil illo et assumenda sit cupiditate. Nam perspiciatis perferendis minus consequatur. Enim ut eos quo.
+                    </p>
+                    <div class="profile d-flex align-items-center">
+                      <img src="assets/img/person/person-m-7.webp" class="profile-img" alt="">
+                      <div class="profile-info">
+                        <h3>Saul Goodman</h3>
+                        <span>Client</span>
+                      </div>
+                    </div>
                   </div>
-                
-              
-            <!-- End Gallery Item -->
-
-            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-architecture" style="position: absolute; left: 0px; top: 0px;">
-              <div class="gallery-card">
-                <div class="gallery-img">
-                  <img src="assets/img/portfolio/portfolio-92.webp" class="img-fluid" alt="Gallery Image" loading="lazy">
-                  <div class="gallery-overlay">
-                    <div class="gallery-info">
-                      <h4>Modern Architecture</h4>
-                      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                      <a href="assets/img/portfolio/portfolio-92.webp" class="glightbox gallery-link" data-gallery="gallery-images">
-                        <i class="bi bi-plus-circle"></i>
-                      </a>
+                  <div class="col-lg-4 d-none d-lg-block">
+                    <div class="featured-img-wrapper">
+                      <img src="assets/img/person/person-m-7.webp" class="featured-img" alt="">
                     </div>
                   </div>
                 </div>
               </div>
-            </div><!-- End Gallery Item -->
+            </div><!-- End Testimonial Item -->
 
-            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-people" style="position: absolute; left: 360px; top: 0px;">
-              <div class="gallery-card">
-                <div class="gallery-img">
-                  <img src="assets/img/portfolio/portfolio-74.webp" class="img-fluid" alt="Gallery Image" loading="lazy">
-                  <div class="gallery-overlay">
-                    <div class="gallery-info">
-                      <h4>Urban Life</h4>
-                      <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris.</p>
-                      <a href="assets/img/portfolio/portfolio-74.webp" class="glightbox gallery-link" data-gallery="gallery-images">
-                        <i class="bi bi-plus-circle"></i>
-                      </a>
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="row">
+                  <div class="col-lg-8">
+                    <h2>Nemo enim ipsam voluptatem</h2>
+                    <p>
+                      Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                    </p>
+                    <p>
+                      Dolorem excepturi esse qui amet maxime quibusdam aut repellendus voluptatum. Corrupti enim a repellat cumque est laborum fuga consequuntur. Dolorem nostrum deleniti quas voluptatem iure dolorum rerum. Repudiandae doloribus ut repellat harum vero aut. Modi aut velit aperiam aspernatur odit ut vitae.
+                    </p>
+                    <div class="profile d-flex align-items-center">
+                      <img src="assets/img/person/person-f-8.webp" class="profile-img" alt="">
+                      <div class="profile-info">
+                        <h3>Sara Wilsson</h3>
+                        <span>Designer</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 d-none d-lg-block">
+                    <div class="featured-img-wrapper">
+                      <img src="assets/img/person/person-f-8.webp" class="featured-img" alt="">
                     </div>
                   </div>
                 </div>
               </div>
-            </div><!-- End Gallery Item -->
+            </div><!-- End Testimonial Item -->
 
-            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-travel" style="position: absolute; left: 0px; top: 306px;">
-              <div class="gallery-card">
-                <div class="gallery-img">
-                  <img src="assets/img/portfolio/portfolio-84.webp" class="img-fluid" alt="Gallery Image" loading="lazy">
-                  <div class="gallery-overlay">
-                    <div class="gallery-info">
-                      <h4>Travel Destinations</h4>
-                      <p>Aenean lacinia bibendum nulla sed consectetur.</p>
-                      <a href="assets/img/portfolio/portfolio-84.webp" class="glightbox gallery-link" data-gallery="gallery-images">
-                        <i class="bi bi-plus-circle"></i>
-                      </a>
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="row">
+                  <div class="col-lg-8">
+                    <h2>
+                      Labore nostrum eos impedit
+                    </h2>
+                    <p>
+                      Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                    </p>
+                    <p>
+                      Itaque ut explicabo vero occaecati est quam rerum sed. Numquam tempora aut aut quaerat quia illum. Nobis quia autem odit ipsam numquam. Doloribus sit sint corporis eius totam fuga. Hic nostrum suscipit corrupti nam expedita adipisci aut optio.
+                    </p>
+                    <div class="profile d-flex align-items-center">
+                      <img src="assets/img/person/person-m-9.webp" class="profile-img" alt="">
+                      <div class="profile-info">
+                        <h3>Matt Brandon</h3>
+                        <span>Freelancer</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 d-none d-lg-block">
+                    <div class="featured-img-wrapper">
+                      <img src="assets/img/person/person-m-9.webp" class="featured-img" alt="">
                     </div>
                   </div>
                 </div>
               </div>
-            </div><!-- End Gallery Item -->
+            </div><!-- End Testimonial Item -->
 
-            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-nature" style="position: absolute; left: 360px; top: 306px;">
-              <div class="gallery-card">
-                <div class="gallery-img">
-                  <img src="assets/img/portfolio/portfolio-45.webp" class="img-fluid" alt="Gallery Image" loading="lazy">
-                  <div class="gallery-overlay">
-                    <div class="gallery-info">
-                      <h4>Natural Wonders</h4>
-                      <p>Cras mattis consectetur purus sit amet fermentum.</p>
-                      <a href="assets/img/portfolio/portfolio-45.webp" class="glightbox gallery-link" data-gallery="gallery-images">
-                        <i class="bi bi-plus-circle"></i>
-                      </a>
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="row">
+                  <div class="col-lg-8">
+                    <h2>Impedit dolor facilis nulla</h2>
+                    <p>
+                      Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                    </p>
+                    <p>
+                      Omnis aspernatur accusantium qui delectus praesentium repellendus. Facilis sint odio aspernatur voluptas commodi qui qui qui pariatur. Corrupti deleniti itaque quaerat ipsum deleniti culpa tempora tempore. Et consequatur exercitationem hic aspernatur nobis est voluptatibus architecto laborum.
+                    </p>
+                    <div class="profile d-flex align-items-center">
+                      <img src="assets/img/person/person-f-10.webp" class="profile-img" alt="">
+                      <div class="profile-info">
+                        <h3>Jena Karlis</h3>
+                        <span>Store Owner</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 d-none d-lg-block">
+                    <div class="featured-img-wrapper">
+                      <img src="assets/img/person/person-f-10.webp" class="featured-img" alt="">
                     </div>
                   </div>
                 </div>
               </div>
-            </div><!-- End Gallery Item -->
+            </div><!-- End Testimonial Item -->
 
-            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-architecture" style="position: absolute; left: 0px; top: 612px;">
-              <div class="gallery-card">
-                <div class="gallery-img">
-                  <img src="assets/img/portfolio/portfolio-50.webp" class="img-fluid" alt="Gallery Image" loading="lazy">
-                  <div class="gallery-overlay">
-                    <div class="gallery-info">
-                      <h4>Historic Buildings</h4>
-                      <p>Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                      <a href="assets/img/portfolio/portfolio-50.webp" class="glightbox gallery-link" data-gallery="gallery-images">
-                        <i class="bi bi-plus-circle"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Gallery Item -->
+          </div>
 
-            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-people" style="position: absolute; left: 360px; top: 612px;">
-              <div class="gallery-card">
-                <div class="gallery-img">
-                  <img src="assets/img/portfolio/portfolio-90.webp" class="img-fluid" alt="Gallery Image" loading="lazy">
-                  <div class="gallery-overlay">
-                    <div class="gallery-info">
-                      <h4>Community Events</h4>
-                      <p>Donec ullamcorper nulla non metus auctor fringilla.</p>
-                      <a href="assets/img/portfolio/portfolio-90.webp" class="glightbox gallery-link" data-gallery="gallery-images">
-                        <i class="bi bi-plus-circle"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Gallery Item -->
+          <div class="swiper-navigation w-100 d-flex align-items-center justify-content-center">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
 
-            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-travel" style="position: absolute; left: 0px; top: 918px;">
-              <div class="gallery-card">
-                <div class="gallery-img">
-                  <img src="assets/img/portfolio/portfolio-23.webp" class="img-fluid" alt="Gallery Image" loading="lazy">
-                  <div class="gallery-overlay">
-                    <div class="gallery-info">
-                      <h4>Exotic Locations</h4>
-                      <p>Sed posuere consectetur est at lobortis.</p>
-                      <a href="assets/img/portfolio/portfolio-23.webp" class="glightbox gallery-link" data-gallery="gallery-images">
-                        <i class="bi bi-plus-circle"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Gallery Item -->
-          </div><!-- End Gallery Container -->
         </div>
 
       </div>
 
-    </section>
-<!-- /Gallery Section -->
+    </section><!-- /Featured Testimonials Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-4">
+          <!-- Testimonial Item 1 -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-item">
+              <div class="stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce posuere metus vitae arcu imperdiet, id aliquet ante scelerisque. Sed sit amet sem vitae urna fringilla tempus.</p>
+              <div class="testimonial-footer">
+                <div class="testimonial-author">
+                  <img src="assets/img/person/person-m-3.webp" alt="Author" class="img-fluid rounded-circle" loading="lazy">
+                  <div>
+                    <h5>Michael Anderson</h5>
+                    <span>Software Developer</span>
+                  </div>
+                </div>
+                <div class="quote-icon">
+                  <i class="bi bi-quote"></i>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Testimonial Item -->
+
+          <!-- Testimonial Item 2 -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonial-item">
+              <div class="stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+              <div class="testimonial-footer">
+                <div class="testimonial-author">
+                  <img src="assets/img/person/person-f-5.webp" alt="Author" class="img-fluid rounded-circle" loading="lazy">
+                  <div>
+                    <h5>Sophia Martinez</h5>
+                    <span>Marketing Specialist</span>
+                  </div>
+                </div>
+                <div class="quote-icon">
+                  <i class="bi bi-quote"></i>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Testimonial Item -->
+
+          <!-- Testimonial Item 3 -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="testimonial-item">
+              <div class="stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p>Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum.</p>
+              <div class="testimonial-footer">
+                <div class="testimonial-author">
+                  <img src="assets/img/person/person-m-7.webp" alt="Author" class="img-fluid rounded-circle" loading="lazy">
+                  <div>
+                    <h5>David Wilson</h5>
+                    <span>Graphic Designer</span>
+                  </div>
+                </div>
+                <div class="quote-icon">
+                  <i class="bi bi-quote"></i>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Testimonial Item -->
+
+          <!-- Testimonial Item 4 -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="testimonial-item">
+              <div class="stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p>Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis.</p>
+              <div class="testimonial-footer">
+                <div class="testimonial-author">
+                  <img src="assets/img/person/person-f-9.webp" alt="Author" class="img-fluid rounded-circle" loading="lazy">
+                  <div>
+                    <h5>Emily Johnson</h5>
+                    <span>UX Designer</span>
+                  </div>
+                </div>
+                <div class="quote-icon">
+                  <i class="bi bi-quote"></i>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Testimonial Item -->
+
+          <!-- Testimonial Item 5 -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="testimonial-item">
+              <div class="stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p>Praesent nonummy mi in odio. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.</p>
+              <div class="testimonial-footer">
+                <div class="testimonial-author">
+                  <img src="assets/img/person/person-f-11.webp" alt="Author" class="img-fluid rounded-circle" loading="lazy">
+                  <div>
+                    <h5>Olivia Thompson</h5>
+                    <span>Entrepreneur</span>
+                  </div>
+                </div>
+                <div class="quote-icon">
+                  <i class="bi bi-quote"></i>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Testimonial Item -->
+
+          <!-- Testimonial Item 6 -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="testimonial-item">
+              <div class="stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+              <div class="testimonial-footer">
+                <div class="testimonial-author">
+                  <img src="assets/img/person/person-m-12.webp" alt="Author" class="img-fluid rounded-circle" loading="lazy">
+                  <div>
+                    <h5>James Taylor</h5>
+                    <span>Financial Analyst</span>
+                  </div>
+                </div>
+                <div class="quote-icon">
+                  <i class="bi bi-quote"></i>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Testimonial Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
 
   </main>
 
@@ -321,7 +463,7 @@
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">AlphMegan</span>
+            <span class="sitename">MediTrust</span>
           </a>
           <div class="footer-contact pt-3">
             <p>A108 Adam Street</p>
@@ -391,7 +533,7 @@
         <!-- You can delete the links only if you've purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://samterrencekabatha.github.io/">ICT DEPARTMENT </a>
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
 

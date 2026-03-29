@@ -70,70 +70,6 @@
         <h1 class="sitename">MediTrust</h1>
       </a>
 
-      
-     <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="admin.html">About</a></li>
-          <li><a href="departments.html">Departments</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="doctors.html">Doctors</a></li>
-          <li class="dropdown"><a href="#"><span>More Pages</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="department-details.html">Department Details</a></li>
-              <li><a href="service-details.html">Service Details</a></li>
-              <li><a href="appointment.html">Appointment</a></li>
-              <li><a href="testimonials.html">Testimonials</a></li>
-              <li><a href="faq.html">Frequently Asked Questions</a></li>
-              <li><a href="gallery.html" class="active">Gallery</a></li>
-              <li><a href="terms.html">Terms</a></li>
-              <li><a href="privacy.html">Privacy</a></li>
-              <li><a href="404.html">404</a></li>
-            </ul>
-          </li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="gallery-7.html">Kilifi</a></li>
-                  <li><a href="gallery-7.html">Mombasa</a></li>
-                  <li><a href="gallery-7.html">Nyandarua</a></li>
-                  <li><a href="gallery-7.html">Meru</a></li>
-                  <li><a href="gallery-7.html">Laikipia</a></li>
-                </ul>
-              </li>
-              <li><a href="gallery-8.html">Nakuru</a></li>
-              <li><a href="gallery-8.html">Uasin gishu</a></li>
-              <li><a href="gallery-8.html">Trans nzoia</a></li>
-              <li><a href="gallery.html">West pokot</a></li>
-              <li><a href="gallery.html">Bungoma</a></li>
-              <li><a href="gallery.html">Nandi</a></li>
-            </ul>
-          </li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-      <a class="btn-getstarted" href="appointment.html">Appointment</a>
-
-    </div>
-  </header>
-
-  <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title">
-      <div class="breadcrumbs">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#"><i class="bi bi-house"></i> Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Category</a></li>
-            <li class="breadcrumb-item active current">Gallery</li>
-          </ol>
-        </nav>
-
       <a class="btn-getstarted" href="appointment.html">Appointment</a>
 
     </div>
@@ -162,10 +98,10 @@
     <!-- Gallery Section -->
     <section id="gallery" class="gallery section">
 
-      <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-          <ul class="gallery-filters isotope-filters aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+          <ul class="gallery-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
             <li data-filter="*" class="filter-active">All</li>
             <li data-filter=".filter-nature">Nature</li>
             <li data-filter=".filter-architecture">Architecture</li>
@@ -173,29 +109,33 @@
             <li data-filter=".filter-travel">Travel</li>
           </ul><!-- End Gallery Filters -->
 
-          <div class="row g-4 isotope-container aos-init aos-animate" data-aos="fade-up" data-aos-delay="200" style="position: relative; height: 1224px;">
-            
-              <div class="gallery-card">
-               <div class="gallery-img">
-        <video autoplay="" muted="" loop="">
-          <source src="assets/img/travel/video-9.mp4" type="video/mp4">
-        </video>
-        <div class="hero-overlay"></div>
-      </div>
-                  </div>
-                
-              
-            <!-- End Gallery Item -->
-
-            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-architecture" style="position: absolute; left: 0px; top: 0px;">
+          <div class="row g-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-nature">
               <div class="gallery-card">
                 <div class="gallery-img">
-                  <img src="assets/img/portfolio/portfolio-57.webp" class="img-fluid" alt="Gallery Image" loading="lazy">
+                  <img src="assets/img/gallery/gallery-1.webp" class="img-fluid" alt="Gallery Image" loading="lazy">
+                  <div class="gallery-overlay">
+                    <div class="gallery-info">
+                      <h4>Nature Exploration</h4>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      <a href="assets/img/gallery/gallery-1.webp" class="glightbox gallery-link" data-gallery="gallery-images">
+                        <i class="bi bi-plus-circle"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Gallery Item -->
+
+            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-architecture">
+              <div class="gallery-card">
+                <div class="gallery-img">
+                  <img src="assets/img/gallery/gallery-2.webp" class="img-fluid" alt="Gallery Image" loading="lazy">
                   <div class="gallery-overlay">
                     <div class="gallery-info">
                       <h4>Modern Architecture</h4>
                       <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                      <a href="assets/img/portfolio/portfolio-57.webp" class="glightbox gallery-link" data-gallery="gallery-images">
+                      <a href="assets/img/gallery/gallery-2.webp" class="glightbox gallery-link" data-gallery="gallery-images">
                         <i class="bi bi-plus-circle"></i>
                       </a>
                     </div>
@@ -204,15 +144,15 @@
               </div>
             </div><!-- End Gallery Item -->
 
-            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-people" style="position: absolute; left: 360px; top: 0px;">
+            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-people">
               <div class="gallery-card">
                 <div class="gallery-img">
-                  <img src="assets/img/profile/profile-58.webp" class="img-fluid" alt="Gallery Image" loading="lazy">
+                  <img src="assets/img/gallery/gallery-3.webp" class="img-fluid" alt="Gallery Image" loading="lazy">
                   <div class="gallery-overlay">
                     <div class="gallery-info">
                       <h4>Urban Life</h4>
                       <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris.</p>
-                      <a href="assets/img/portfolio/portfolio-58.webp" class="glightbox gallery-link" data-gallery="gallery-images">
+                      <a href="assets/img/gallery/gallery-3.webp" class="glightbox gallery-link" data-gallery="gallery-images">
                         <i class="bi bi-plus-circle"></i>
                       </a>
                     </div>
@@ -221,15 +161,15 @@
               </div>
             </div><!-- End Gallery Item -->
 
-            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-travel" style="position: absolute; left: 0px; top: 306px;">
+            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-travel">
               <div class="gallery-card">
                 <div class="gallery-img">
-                  <img src="assets/img/portfolio/portfolio-59.webp" class="img-fluid" alt="Gallery Image" loading="lazy">
+                  <img src="assets/img/gallery/gallery-4.webp" class="img-fluid" alt="Gallery Image" loading="lazy">
                   <div class="gallery-overlay">
                     <div class="gallery-info">
                       <h4>Travel Destinations</h4>
                       <p>Aenean lacinia bibendum nulla sed consectetur.</p>
-                      <a href="assets/img/portfolio/portfolio-59.webp" class="glightbox gallery-link" data-gallery="gallery-images">
+                      <a href="assets/img/gallery/gallery-4.webp" class="glightbox gallery-link" data-gallery="gallery-images">
                         <i class="bi bi-plus-circle"></i>
                       </a>
                     </div>
@@ -238,15 +178,15 @@
               </div>
             </div><!-- End Gallery Item -->
 
-            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-nature" style="position: absolute; left: 360px; top: 306px;">
+            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-nature">
               <div class="gallery-card">
                 <div class="gallery-img">
-                  <img src="assets/img/portfolio/portfolio-60.webp" class="img-fluid" alt="Gallery Image" loading="lazy">
+                  <img src="assets/img/gallery/gallery-5.webp" class="img-fluid" alt="Gallery Image" loading="lazy">
                   <div class="gallery-overlay">
                     <div class="gallery-info">
                       <h4>Natural Wonders</h4>
                       <p>Cras mattis consectetur purus sit amet fermentum.</p>
-                      <a href="assets/img/portfolio/portfolio-60.webp" class="glightbox gallery-link" data-gallery="gallery-images">
+                      <a href="assets/img/gallery/gallery-5.webp" class="glightbox gallery-link" data-gallery="gallery-images">
                         <i class="bi bi-plus-circle"></i>
                       </a>
                     </div>
@@ -255,15 +195,15 @@
               </div>
             </div><!-- End Gallery Item -->
 
-            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-architecture" style="position: absolute; left: 0px; top: 612px;">
+            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-architecture">
               <div class="gallery-card">
                 <div class="gallery-img">
-                  <img src="assets/img/portfolio/portfolio-61.webp" class="img-fluid" alt="Gallery Image" loading="lazy">
+                  <img src="assets/img/gallery/gallery-6.webp" class="img-fluid" alt="Gallery Image" loading="lazy">
                   <div class="gallery-overlay">
                     <div class="gallery-info">
                       <h4>Historic Buildings</h4>
                       <p>Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                      <a href="assets/img/portfolio/portfolio-61.webp" class="glightbox gallery-link" data-gallery="gallery-images">
+                      <a href="assets/img/gallery/gallery-6.webp" class="glightbox gallery-link" data-gallery="gallery-images">
                         <i class="bi bi-plus-circle"></i>
                       </a>
                     </div>
@@ -272,15 +212,15 @@
               </div>
             </div><!-- End Gallery Item -->
 
-            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-people" style="position: absolute; left: 360px; top: 612px;">
+            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-people">
               <div class="gallery-card">
                 <div class="gallery-img">
-                  <img src="assets/img/portfolio/portfolio-62.webp" class="img-fluid" alt="Gallery Image" loading="lazy">
+                  <img src="assets/img/gallery/gallery-7.webp" class="img-fluid" alt="Gallery Image" loading="lazy">
                   <div class="gallery-overlay">
                     <div class="gallery-info">
                       <h4>Community Events</h4>
                       <p>Donec ullamcorper nulla non metus auctor fringilla.</p>
-                      <a href="assets/img/portfolio/portfolio-62.webp" class="glightbox gallery-link" data-gallery="gallery-images">
+                      <a href="assets/img/gallery/gallery-7.webp" class="glightbox gallery-link" data-gallery="gallery-images">
                         <i class="bi bi-plus-circle"></i>
                       </a>
                     </div>
@@ -289,15 +229,15 @@
               </div>
             </div><!-- End Gallery Item -->
 
-            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-travel" style="position: absolute; left: 0px; top: 918px;">
+            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-travel">
               <div class="gallery-card">
                 <div class="gallery-img">
-                  <img src="assets/img/portfolio/portfolio-63.webp" class="img-fluid" alt="Gallery Image" loading="lazy">
+                  <img src="assets/img/gallery/gallery-8.webp" class="img-fluid" alt="Gallery Image" loading="lazy">
                   <div class="gallery-overlay">
                     <div class="gallery-info">
                       <h4>Exotic Locations</h4>
                       <p>Sed posuere consectetur est at lobortis.</p>
-                      <a href="assets/img/portfolio/portfolio-63.webp" class="glightbox gallery-link" data-gallery="gallery-images">
+                      <a href="assets/img/gallery/gallery-8.webp" class="glightbox gallery-link" data-gallery="gallery-images">
                         <i class="bi bi-plus-circle"></i>
                       </a>
                     </div>
@@ -310,8 +250,7 @@
 
       </div>
 
-    </section>
-<!-- /Gallery Section -->
+    </section><!-- /Gallery Section -->
 
   </main>
 
@@ -391,7 +330,7 @@
         <!-- You can delete the links only if you've purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://samterrencekabatha.github.io/">ICT DEPARTMENT</a>
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
 

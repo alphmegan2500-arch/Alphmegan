@@ -1,421 +1,196 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="en"><head>
+<meta charset="UTF-8">
+<title>Your Hotel Web Project</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+/* --- GENERAL --- */
+body{margin:0;font-family:Segoe UI;background:#f4f4f4;color:#222;transition:0.3s}
+nav{position:fixed;top:0;width:100%;background:#111;padding:12px;z-index:10}
+nav a{color:#fff;margin:0 12px;text-decoration:none;font-weight:500}
+section{padding:60px 8%}
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Gallery - MediTrust Bootstrap Template</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+/* --- HERO --- */
+.hero{height:80vh;background:url('https://images.unsplash.com/photo-1566073771259-6a8506099945')center/cover;
+display:flex;flex-direction:column;justify-content:center;align-items:center;color:#fff;text-align:center;transition:0.3s}
+.hero h1{font-size:42px;margin:0}
+.hero button{margin-top:18px;padding:12px 28px;border:none;background:#e6b800;color:#111;font-weight:bold;border-radius:5px;cursor:pointer;transition:0.3s}
+.hero button:hover{background:#ffcc00;transform:scale(1.05)}
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+/* --- GRID CARDS --- */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:#fff;border-radius:8px;overflow:hidden;transition:0.3s}
+.card:hover{transform:translateY(-5px);box-shadow:0 10px 25px rgba(0,0,0,0.2)}
+.card img{width:100%;height:160px;object-fit:cover}
+.card div{padding:12px}
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+/* --- CHARTS --- */
+.chart-box{background:#111;color:#fff;padding:20px;border-radius:8px;margin-top:25px;transition:0.3s}
+.chart-box:hover{background:#e6b800;color:#111;transform:scale(1.03)}
+.mini{max-width:350px;margin:20px auto}
+canvas{height:220px !important}
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+/* --- FOOTER --- */
+footer{background:#111;color:#aaa;text-align:center;padding:25px}
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+/* --- DARK MODE --- */
+body.dark{background:#111;color:#eee}
+body.dark nav{background:#222}
+body.dark .card{background:#222;color:#eee}
+body.dark .chart-box{background:#222;color:#eee}
+body.dark .hero button{background:#ffcc00;color:#111}
+.login-container {
+    background:#fff; padding:40px; border-radius:20px; box-shadow:0 10px 25px rgba(0,0,0,0.2); text-align:center; width:350px;
+    transition: transform 0.3s;
+    z-index:1;
+}
+.login-container:hover { transform: scale(1.02); }
+h2 { margin-bottom:30px; color:#333; }
+select, input {
+    width:100%; padding:12px; margin:10px 0; border-radius:12px; border:1px solid #ccc; font-size:16px;
+}
+button {
+    width:100%; padding:12px; margin-top:15px; border:none; border-radius:12px; background:#007bff; color:#fff; font-weight:bold; font-size:16px; cursor:pointer;
+    transition:0.3s;
+}
+button:hover { background:#0056b3; }
+#error { color:red; margin-top:10px; font-weight:600; }
 
-  <!-- =======================================================
-  * Template Name: MediTrust
-  * Template URL: https://bootstrapmade.com/meditrust-bootstrap-hospital-website-template/
-  * Updated: Jul 04 2025 with Bootstrap v5.3.7
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+</style>
 </head>
+<body>
 
-<body class="gallery-page">
+<!-- NAVIGATION -->
+<nav>
+<a href="#about">About</a>
+<a href="#rooms">Rooms</a>
+<a href="#dining">Dining</a>
+<a href="#services">Services</a>
+<a href="#charts">Charts</a>
+<a href="#contact">Contact</a>
+<a href="#" onclick="toggleDark()">🌓</a>
+</nav>
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+<!-- HERO -->
+<div class="login-container">
+  <h2>System Login</h2>
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.webp" alt=""> -->
-        <svg class="my-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g id="bgCarrier" stroke-width="0"></g>
-          <g id="tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-          <g id="iconCarrier">
-            <path d="M22 22L2 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
-            <path d="M17 22V6C17 4.11438 17 3.17157 16.4142 2.58579C15.8284 2 14.8856 2 13 2H11C9.11438 2 8.17157 2 7.58579 2.58579C7 3.17157 7 4.11438 7 6V22" stroke="currentColor" stroke-width="1.5"></path>
-            <path opacity="0.5" d="M21 22V8.5C21 7.09554 21 6.39331 20.6629 5.88886C20.517 5.67048 20.3295 5.48298 20.1111 5.33706C19.6067 5 18.9045 5 17.5 5" stroke="currentColor" stroke-width="1.5"></path>
-            <path opacity="0.5" d="M3 22V8.5C3 7.09554 3 6.39331 3.33706 5.88886C3.48298 5.67048 3.67048 5.48298 3.88886 5.33706C4.39331 5 5.09554 5 6.5 5" stroke="currentColor" stroke-width="1.5"></path>
-            <path d="M12 22V19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
-            <path opacity="0.5" d="M10 12H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
-            <path opacity="0.5" d="M5.5 11H7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
-            <path opacity="0.5" d="M5.5 14H7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
-            <path opacity="0.5" d="M17 11H18.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
-            <path opacity="0.5" d="M17 14H18.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
-            <path opacity="0.5" d="M5.5 8H7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
-            <path opacity="0.5" d="M17 8H18.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
-            <path opacity="0.5" d="M10 15H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
-            <path d="M12 9V5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M14 7L10 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-          </g>
-        </svg>
+  <select id="role">
+    <option value="">Select Role</option>
+    <option value="admin">Admin</option>
+    <option value="client">Client</option>
+  </select>
 
-        <h1 class="sitename">AlphMegan</h1>
-      </a>
+  <input type="password" id="password" placeholder="Enter Password">
+  <button onclick="login()">Login</button>
+  <p id="error"></p>
+</div>
 
-      
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="admin.html">About</a></li>
-          <li><a href="departments.html">Departments</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="doctors.html">Doctors</a></li>
-          <li class="dropdown"><a href="#"><span>More Pages</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="department-details.html">Department Details</a></li>
-              <li><a href="service-details.html">Service Details</a></li>
-              <li><a href="appointment.html">Appointment</a></li>
-              <li><a href="testimonials.html">Testimonials</a></li>
-              <li><a href="faq.html">Frequently Asked Questions</a></li>
-              <li><a href="gallery.html" class="active">Gallery</a></li>
-              <li><a href="terms.html">Terms</a></li>
-              <li><a href="privacy.html">Privacy</a></li>
-              <li><a href="404.html">404</a></li>
-            </ul>
-          </li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="gallery-7">Deep Dropdown 1</a></li>
-                  <li><a href="gallery-7">Deep Dropdown 2</a></li>
-                  <li><a href="gallery-7">Deep Dropdown 3</a></li>
-                  <li><a href="gallery-7">Deep Dropdown 4</a></li>
-                  <li><a href="gallery-7">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="gallery-8">Dropdown 2</a></li>
-              <li><a href="gallery-8">Dropdown 3</a></li>
-              <li><a href="gallery-8">Dropdown 4</a></li>
-            </ul>
-          </li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+<!-- ABOUT -->
+<section id="about">
+<h2>About Our Hotel</h2>
+<p>Modern 4-star hotel offering premium rooms, fine dining, and professional hospitality services. Perfect for business &amp; leisure.</p>
+</section>
 
-      <a class="btn-getstarted" href="appointment.html">Premium</a>
+<!-- ROOMS -->
+<section id="rooms">
+<h2>Rooms &amp; Suites</h2>
+<div class="grid">
+<div class="card"><img src="https://images.unsplash.com/photo-1501117716987-c8e1ecb2101f"><div><h4>Deluxe Room</h4><p>Stylish, cozy, modern.</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"><div><h4>Executive Suite</h4><p>Luxury &amp; space for guests.</p></div></div>
+</div>
+</section>
 
-    </div>
-  </header>
+<!-- DINING -->
+<section id="dining">
+<h2>Eat &amp; Drink</h2>
+<div class="grid">
+<div class="card"><img src="https://images.unsplash.com/photo-1541542684-4c7a7a4cf2f7"><div><h4>Restaurant</h4><p>Local &amp; international cuisine.</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c"><div><h4>Bar &amp; Lounge</h4><p>Relax &amp; enjoy signature drinks.</p></div></div>
+</div>
+</section>
 
-  <main class="main">
+<!-- SERVICES -->
+<section id="services">
+<h2>Services</h2>
+<div class="grid">
+<div class="card"><div><h4>Housekeeping</h4><p>Daily cleaning &amp; laundry.</p></div></div>
+<div class="card"><div><h4>Security</h4><p>24/7 surveillance.</p></div></div>
+<div class="card"><div><h4>Maintenance</h4><p>Facility management.</p></div></div>
+<div class="card"><div><h4>Kitchen</h4><p>Professional chefs &amp; catering.</p></div></div>
+</div>
+</section>
 
-    <!-- Page Title -->
-    <div class="page-title">
-      <div class="breadcrumbs">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#"><i class="bi bi-house"></i> Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Category</a></li>
-            <li class="breadcrumb-item active current">Gallery</li>
-          </ol>
-        </nav>
+<!-- CHARTS -->
+<section id="charts" class="chart-box">
+<h2>Hotel Occupancy Overview</h2>
+<canvas id="occupancyChart"></canvas>
+<div class="chart-box mini">
+<h4>Revenue vs Occupancy</h4>
+<canvas id="revenueChart"></canvas>
+</div>
+</section>
 
-      <a class="btn-getstarted" href="appointment.html">Appointment</a>
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact</h2>
+<p>📍 Nairobi, Kenya</p>
+<p>📞 +254 700 000 000</p>
+<p>📧 info@yourhotel.com</p>
+</section>
 
-    </div>
-  </header>
+<footer>© 2025 Your Hotel Name | Proposal Demo</footer>
+<script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+<script>
+// DARK MODE TOGGLE
+function toggleDark(){document.body.classList.toggle('dark');}
 
-  <main class="main">
+// CHARTS
+new Chart(document.getElementById('occupancyChart'),{
+type:'line',
+data:{
+labels:['Jan','Feb','Mar','Apr','May','Jun'],
+datasets:[{label:'Occupancy %',data:[60,75,85,70,90,80],borderColor:'#ffcc00',backgroundColor:'rgba(255,204,0,0.3)',fill:true,tension:.4}]
+},
+options:{responsive:true,scales:{y:{beginAtZero:true,max:100}}}
+});
 
-    <!-- Page Title -->
-    <div class="page-title">
-      <div class="breadcrumbs">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#"><i class="bi bi-house"></i> Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Category</a></li>
-            <li class="breadcrumb-item active current">Gallery</li>
-          </ol>
-        </nav>
-      </div>
+new Chart(document.getElementById('revenueChart'),{
+type:'bar',
+data:{
+labels:['Jan','Feb','Mar','Apr','May','Jun'],
+datasets:[{label:'Revenue (K)',data:[400,520,600,480,700,650],backgroundColor:'#111'}]
+},
+options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true}}}
+});
 
-      <div class="title-wrapper">
-        <h1>Gallery</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-      </div>
-    </div><!-- End Page Title -->
+// --- Role-based Login ---
+function login() {
+    const role = document.getElementById('role').value;
+    const password = document.getElementById('password').value;
+    const error = document.getElementById('error');
+    error.textContent = '';
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery section">
+    if(!role || !password) {
+        error.textContent = 'Please select role and enter password!';
+        return;
+    }
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+    const credentials = {
+        admin: 'admin123',
+        client: 'client123'
+    };
 
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-          <ul class="gallery-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-nature">Nature</li>
-            <li data-filter=".filter-architecture">Architecture</li>
-            <li data-filter=".filter-people">People</li>
-            <li data-filter=".filter-travel">Travel</li>
-          </ul><!-- End Gallery Filters -->
+    if(credentials[role] && credentials[role] === password){
+        alert('Login successful as '+role+'!');
+        window.location.href = role + '.html'; // Redirect to role page
+    } else {
+        error.textContent = 'Invalid role or password!';
+    }
+}
+</script>
 
-          <div class="row g-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-nature">
-              <div class="gallery-card">
-                <div class="gallery-img">
-                  <img src="assets/img/portfolio/portfolio-9.webp" class="img-fluid" alt="Gallery Image" loading="lazy">
-                  <div class="gallery-overlay">
-                    <div class="gallery-info">
-                      <h4>Nature Exploration</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                      <a href="assets/img/portfolio/portfolio-9.webp" class="glightbox gallery-link" data-gallery="gallery-images">
-                        <i class="bi bi-plus-circle"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Gallery Item -->
 
-            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-architecture">
-              <div class="gallery-card">
-                <div class="gallery-img">
-                  <img src="assets/img/portfolio/portfolio-10.webp" class="img-fluid" alt="Gallery Image" loading="lazy">
-                  <div class="gallery-overlay">
-                    <div class="gallery-info">
-                      <h4>Modern Architecture</h4>
-                      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                      <a href="assets/img/portfolio/portfolio-10.webp" class="glightbox gallery-link" data-gallery="gallery-images">
-                        <i class="bi bi-plus-circle"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Gallery Item -->
-
-            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-people">
-              <div class="gallery-card">
-                <div class="gallery-img">
-                  <img src="assets/img/portfolio/portfolio-11.webp" class="img-fluid" alt="Gallery Image" loading="lazy">
-                  <div class="gallery-overlay">
-                    <div class="gallery-info">
-                      <h4>Urban Life</h4>
-                      <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris.</p>
-                      <a href="assets/img/portfolio/portfolio-11.webp" class="glightbox gallery-link" data-gallery="gallery-images">
-                        <i class="bi bi-plus-circle"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Gallery Item -->
-
-            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-travel">
-              <div class="gallery-card">
-                <div class="gallery-img">
-                  <img src="assets/img/portfolio/portfolio-12.webp" class="img-fluid" alt="Gallery Image" loading="lazy">
-                  <div class="gallery-overlay">
-                    <div class="gallery-info">
-                      <h4>Travel Destinations</h4>
-                      <p>Aenean lacinia bibendum nulla sed consectetur.</p>
-                      <a href="assets/img/portfolio/portfolio-12.webp" class="glightbox gallery-link" data-gallery="gallery-images">
-                        <i class="bi bi-plus-circle"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Gallery Item -->
-
-            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-nature">
-              <div class="gallery-card">
-                <div class="gallery-img">
-                  <img src="assets/img/portfolio/portfolio-13.webp" class="img-fluid" alt="Gallery Image" loading="lazy">
-                  <div class="gallery-overlay">
-                    <div class="gallery-info">
-                      <h4>Natural Wonders</h4>
-                      <p>Cras mattis consectetur purus sit amet fermentum.</p>
-                      <a href="assets/img/portfolio/portfolio-13.webp" class="glightbox gallery-link" data-gallery="gallery-images">
-                        <i class="bi bi-plus-circle"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Gallery Item -->
-
-            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-architecture">
-              <div class="gallery-card">
-                <div class="gallery-img">
-                  <img src="assets/img/portfolio/portfolio-14.webp" class="img-fluid" alt="Gallery Image" loading="lazy">
-                  <div class="gallery-overlay">
-                    <div class="gallery-info">
-                      <h4>Historic Buildings</h4>
-                      <p>Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                      <a href="assets/img/portfolio/portfolio-14.webp" class="glightbox gallery-link" data-gallery="gallery-images">
-                        <i class="bi bi-plus-circle"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Gallery Item -->
-
-            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-people">
-              <div class="gallery-card">
-                <div class="gallery-img">
-                  <img src="assets/img/portfolio/portfolio-15.webp" class="img-fluid" alt="Gallery Image" loading="lazy">
-                  <div class="gallery-overlay">
-                    <div class="gallery-info">
-                      <h4>Community Events</h4>
-                      <p>Donec ullamcorper nulla non metus auctor fringilla.</p>
-                      <a href="assets/img/portfolio/portforlio-15.webp" class="glightbox gallery-link" data-gallery="gallery-images">
-                        <i class="bi bi-plus-circle"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Gallery Item -->
-
-            <div class="col-lg-4 col-md-6 gallery-item isotope-item filter-travel">
-              <div class="gallery-card">
-                <div class="gallery-img">
-                  <img src="assets/img/portfolio/portfolio-17.webp" class="img-fluid" alt="Gallery Image" loading="lazy">
-                  <div class="gallery-overlay">
-                    <div class="gallery-info">
-                      <h4>Exotic Locations</h4>
-                      <p>Sed posuere consectetur est at lobortis.</p>
-                      <a href="assets/img/portfolio/portfolio-17.webp" class="glightbox gallery-link" data-gallery="gallery-images">
-                        <i class="bi bi-plus-circle"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Gallery Item -->
-          </div><!-- End Gallery Container -->
-        </div>
-
-      </div>
-
-    </section><!-- /Gallery Section -->
-
-  </main>
-
-  <footer id="footer" class="footer position-relative light-background">
-
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">AlphMegan</span>
-          </a>
-          <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
-          </div>
-          <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Hic solutasetp</h4>
-          <ul>
-            <li><a href="#">Molestiae accusamus iure</a></li>
-            <li><a href="#">Excepturi dignissimos</a></li>
-            <li><a href="#">Suscipit distinctio</a></li>
-            <li><a href="#">Dilecta</a></li>
-            <li><a href="#">Sit quas consectetur</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Nobis illum</h4>
-          <ul>
-            <li><a href="#">Ipsam</a></li>
-            <li><a href="#">Laudantium dolorum</a></li>
-            <li><a href="#">Dinera</a></li>
-            <li><a href="#">Trodelas</a></li>
-            <li><a href="#">Flexo</a></li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">MyWebsite</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://samterrencekabatha.github.io/">ICT DEPARTMENT</a>
-      </div>
-    </div>
-
-  </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-</body>
-
-</html>
+</body></html>

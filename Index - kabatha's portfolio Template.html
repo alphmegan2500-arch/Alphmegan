@@ -1,0 +1,1402 @@
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - Platia Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Platia
+  * Template URL: https://bootstrapmade.com/platia-bootstrap-restaurant-template/
+  * Updated: Aug 11 2025 with Bootstrap v5.3.7
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+<head>
+<header id="header" class="header fixed-top">
+
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    padding: 20px;
+}
+
+.form-box {
+    max-width: 500px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background: #0a7cff;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #055fd1;
+}
+
+.result {
+    margin-top: 20px;
+    background: #eef3ff;
+    padding: 15px;
+    border-radius: 6px;
+}/* Smooth GPU motion */
+.section,
+.timeline-item,
+.info-section,
+.tool-group {
+    will-change: transform;
+    overflow: hidden;
+}
+
+/* Animated gradient border */
+.section::after,
+.timeline-item::after,
+.info-section::after,
+.tool-group::after {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(
+        120deg,
+        #29f3c3,
+        #7c7cff,
+        #ff5fd2,
+        #29f3c3
+    );
+    background-size: 300% 300%;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    animation: borderFlow 6s linear infinite;
+    z-index: -1;
+    border-radius: 14px;
+}
+
+@keyframes borderFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.section:hover::after,
+.timeline-item:hover::after,
+.info-section:hover::after,
+.tool-group:hover::after {
+    opacity: 1;
+}
+
+/* Micro-hover inner motion */
+.section > *,
+.timeline-item > *,
+.info-section > *,
+.tool-group > * {
+    transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.section:hover > *,
+.timeline-item:hover > *,
+.info-section:hover > *,
+.tool-group:hover > * {
+    transform: translateY(-2px);
+}
+
+/* Text accent on hover */
+.section:hover .section-title,
+.info-section:hover h3 {
+    color: #29f3c3;
+}
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-card {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.portfolio-card .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(18,18,18,0.65);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    letter-spacing: 1px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.portfolio-card:hover img {
+    transform: scale(1.12);
+}
+
+.portfolio-card:hover .overlay {
+    opacity: 1;
+}
+.section,
+.timeline-item,
+.info-section,
+.tool-group {
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.08),
+        rgba(255,255,255,0.02)
+    );
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255,255,255,0.12);
+}nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  padding: 15px;
+  backdrop-filter: blur(8px);
+  text-align: center;
+  z-index: 100;
+}
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+}
+nav a:hover { color: #ffcc00; }
+footer {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 30px;
+}
+
+</style>
+  <!-- =======================================================
+  * Template Name: Portfolio
+  * Template URL: https://bootstrapmade.com/medinest-bootstrap-hospital-template/
+  * Updated: Jan 1 2026 with Bootstrap v5.3.7
+  * Author: samterrencekabatha.github.io
+  * License: https://samterrencekabatha.github.io/license/
+  ======================================================== -->
+</header>
+<body>
+
+    <!-- Navigation -->
+   <nav>
+  <a href="Index - kabatha's portfolio Template_files/New folder/admin.html"
+  <a href="New folder/admin.html">Tech Stack</a>
+  <a href="New folder/index.html">Reports</a>
+  <a href="New folder/departments.html">Artist Vetting</a>
+  <a href="New folder/faq.html">ATW</a>
+  <a href="New folder/gallery.html">Gallery</a>
+  <a href="New folder/404.html">Session Booking</a>
+</nav><br><br><br>
+
+    <!-- Page 1: CV/Resume (resembles first image) -->
+    <div id="page1" class="container">
+<section id="hero" class="hero section dark-background">
+
+      <div class="hero-background">
+        <video autoplay="" muted="" loop="" playsinline="">
+          <source src="assets/img/restaurant/video-4.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+      </div>
+
+      <div class="container hero-content">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="hero-text aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+              <span class="tagline">Experience Culinary Excellence</span>
+              <h1 class="hero-title">Savor Every Moment at AlphMegan Universe</h1>
+              <p class="hero-description">Indulge in authentic cuisine crafted with passion and the finest ingredients. From traditional recipes passed down through generations to innovative culinary creations, we offer an unforgettable dining experience.</p>
+
+              <div class="hero-actions aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+                <a href="#" class="btn btn-primary">Book a Table</a>
+                <a href="#" class="btn btn-outline">View Menu</a>
+              </div>
+
+              <div class="hero-features aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+                <div class="feature-item">
+                  <i class="bi bi-clock"></i>
+                  <div class="feature-text">
+                    <span class="label">Open Daily</span>
+                    <span class="value">11:00 AM - 11:00 PM</span>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <i class="bi bi-geo-alt"></i>
+                  <div class="feature-text">
+                    <span class="label">Location</span>
+                    <span class="value">Downtown Chicago</span>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <i class="bi bi-telephone"></i>
+                  <div class="feature-text">
+                    <span class="label">Reservations</span>
+                    <span class="value">+1 (312) 555-0198</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="booking-card aos-init aos-animate" data-aos="fade-left" data-aos-delay="200">
+              <h3>Make a Reservation</h3>
+              <form action="forms/book-a-table.php" method="post" class="php-email-form">
+                <div class="row gy-3">
+                  <div class="col-md-6">
+                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                  </div>
+                  <div class="col-md-6">
+                    <input type="email" name="email" class="form-control" placeholder="Your Email" required="">
+                  </div>
+                  <div class="col-md-6">
+                    <input type="tel" name="phone" class="form-control" placeholder="Your Phone" required="">
+                  </div>
+                  <div class="col-md-6">
+                    <select name="people" class="form-control" required="">
+                      <option value="">Guests</option>
+                      <option value="1">1 Person</option>
+                      <option value="2">2 People</option>
+                      <option value="3">3 People</option>
+                      <option value="4">4 People</option>
+                      <option value="5">5+ People</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="date" name="date" class="form-control" required="">
+                  </div>
+                  <div class="col-md-6">
+                    <input type="time" name="time" class="form-control" required="">
+                  </div>
+                  <div class="col-12">
+                    <textarea name="message" class="form-control" rows="3" placeholder="Special requests or dietary restrictions"></textarea>
+                  </div>
+                  <div class="col-12">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your reservation request has been sent. We'll contact you shortly!</div>
+                    <button type="submit" class="btn btn-primary w-100">Reserve Now</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+        <div class="scroll-text">Scroll to Explore</div>
+        <div class="scroll-arrow">
+          <i class="bi bi-chevron-down"></i>
+        </div>
+      </div>
+
+    </section>        <header>
+            <img src="https://via.placeholder.com/180" alt="Mega Verse" class="profile-img">
+            <div class="intro">
+                My name is AlphMega (K), self-taught digital artist with 5+ years of experience creating modern, clean, and unique brands that make a lasting impression.
+            </div>
+            <div class="interests">
+                Interests: 🎮Gaming | 🎬Film Making | ✈️Traveling
+            </div>
+        </header>
+
+        <div class="container section-title aos-init aos-animate" data-aos="fade-up">
+      <div class="timeline-item section">
+                <div class="timeline-header">
+                    <span>Freelancer</span>
+                    <span>2025 - now</span>
+                </div>
+                <h2>Logo/Brand Designer</h2>
+                <ul>
+                    <li><p>Worked on diverse logo and brand identity projects.</p></li>
+                    <li><p>Collaborated with clients from multiple countries.</p></li>
+                    <li><p>Developed a versatile design skill set.</p></li>
+                    <li><p>Adapted to unique challenges and requirements.</p></li>
+                </ul>
+            </div>
+      </div>
+<div class="container section-title aos-init aos-animate" data-aos="fade-up">
+    <div class="timeline">
+            <div class="timeline-item section">
+                <div class="timeline-header">
+                    <span>Freelancer</span>
+                    <span>2025 - now</span>
+                </div>
+                <h2>Bead Artist</h2>
+                <ul>
+                    <li><p>Worked on diverse logo and brand identity projects.</p></li>
+                    <li><p>Collaborated with clients from multiple countries.</p></li>
+                    <li><p>Developed a versatile design skill set.</p></li>
+                    <li><p>Adapted to unique challenges and requirements.</p></li>
+                    <li><p>Winner street opinion poll tables for best popular digital artistr</p></li>
+                </ul>
+            </div>
+
+            <div class="timeline-item section">
+                <div class="timeline-header">
+                    <span>Meetzed</span>
+                    <span>2020 - 2021</span>
+                </div>
+                <h2>Graphic Artist</h2>
+                <ul>
+                    <li><p>Collaboration: Supported Lead Designer on projects.</p></li>
+                    <li><p>Branding: Crafted unique brand identities.</p></li>
+                    <li><p>Tools: Used Illustrator, Photoshop &amp; InDesign.</p></li>
+                </ul>
+            </div>
+        </div></div>
+
+        <div class="container section-title aos-init aos-animate" data-aos="fade-up"></div><div class="tools">
+            <div class="tool-group section">
+                <div class="section-title"><h2>Design Tools</h2></div>
+                <div class="tool-icons">
+                <ul>
+                    <li><div class="tool-icon"><p>Blender</p></div></li>
+                    <li><div class="tool-icon"><p>Ps</p></div></li>
+                    <li><div class="tool-icon"><p>Id</p></div></li>
+                    <li><div class="tool-icon"><p>Xd</p></div></li>
+                </ul>
+                </div>
+            </div>
+
+            <div class="tool-group section">
+                <div class="section-title"><h2>Editing Tools</h2></div>
+                <div class="tool-icons">
+                <ul id="icons">
+                    <li id="ae"><div class="tool-icon"><p>Ae</p></div></li>
+                    <li id="pr"><div class="tool-icon"><p>Pr</p></div></li>
+                    <li id="dv"><div class="tool-icon"><p>DaVinci</p></div></li>
+                </ul>
+                </div>
+            </div>
+        </div>
+
+        
+    <div class="section">
+            <div class="section-title"><h2>Languages</h2></div>
+            <div class="langs">
+                <ul id="langs">
+                    <li><span class="flag"><p class="swahili">🇮🇳 Swahili</p></span></li>
+                    <li><span class="flag"><p class="english">🇬🇧 English</p></span></li>
+                    <li><span class="flag"><p class="enlglishUS">🇺🇸 English</p></span></li>
+                </ul>
+               
+            </div>
+        </div>
+
+        <div class="container section-title aos-init aos-animate" data-aos="fade-up">
+    <div class="section">
+            <div class="section-title"><h2>Portfolio</h2></div>
+            <div class="portfolio-links">
+                <a href="#" class="portfolio-link">Behance</a>
+                <a href="#" class="portfolio-link">Instagram</a>
+                <a href="#" class="portfolio-link">YouTube</a>
+                <a href="#" class="portfolio-link">Dribbble</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-section-title aos-init aos-animate" data-aos="fade-up" <="" div="">
+<div class="section details">
+            <div class="detail-item"><h2>Role</h2>Founder &amp; King|Digital artist|Entrepreneur</div>
+            <div class="detail-item"><h2>Email</h2> <a href="https://samterrencekabatha.github.io/">alphmegastudio54@gmail.com</a></div>
+            <div class="detail-item"><h2>Vehicle Licence</h2><p>True</p></div>
+            <div class="detail-item">🎂 25 years</div>
+            <div class="detail-item">🌐 iamalphmegafreelancer.com</div>
+            <div class="detail-item">📞 +254 795 307 008</div>
+            <div class="detail-item">📍 Kenya</div>
+        </div></div>
+    </div>
+
+    <!-- Page 2: Detailed Portfolio (resembles second image - dark resume with sections) -->
+    <div id="page2" class="container page2">
+        <header>
+            <img src="https://via.placeholder.com/200" alt="Profile" class="profile-img">
+            
+                <div class="container section-title aos-init aos-animate" data-aos="fade-up"><h2>ALPHA MEGA THE GREAT</h2></div>
+                <p class="summary">
+                    // Collaboration on webcomics Development, Modern &amp; unique Designs.<br>
+                    // Passionate about scalable digital comics.<br>
+                    // Available for worldwide projects.
+                </p>
+            
+        </header>
+<div class="container section-title aos-init aos-animate" data-aos="fade-up">
+        <div class="info-grid">
+            <div class="info-section">
+                <h2>Royal Advisor Personal Information</h2>
+                <ul id="personal data">
+                    <li><p>Role: Logo &amp; Brand Designer | Freelancer</p></li>
+                    <li><p>Email: samterrencekabatha.github.io</p></li>
+                    <li><p>Phone: +254 796 071 670</p></li>
+                    <li><p>Location: Nairobi, Kenya</p></li>
+                    <li><p>Age: 25</p></li>
+            </ul>
+            </div>
+
+            <div class="info-section">
+                <h2>Personal Assistant's Education</h2>
+                <ul id="education">
+                    <li><p>Private Pilot Licence in Military craft, PUBG MOBIL (2022)</p></li>
+                    <li><p>Bachelor's Degree in Computer Science MKSU Machakos, Kenya (2020-2025)</p></li>
+                    <li><p>Diploma Animation and Graphic Design Nairobi, Kenya (2019-20)</p></li>
+                        <li><p>Certificate in Documentation and Library Science Nanyuki, Kenya</p></li>
+                    <li><p>High School Humanities Nanyuki Cantonment, Kenya(2019)</p></li>
+                    <li><p>Middle School Humanities MKBS, Kenya(2015)</p></li>
+                </ul>
+            </div>
+
+            <div class="info-section">
+                <h2>Experience</h2>
+    <ul id="experience">
+        <li><p>Freelancer (2021-now): Logo/Brand Designer</p></li>
+        <li><p>Meetzed (2020-2021): Graphic Designer</p></li>
+    </ul>
+            </div>
+
+            <div class="info-section">
+                <h2>Tech Stack &amp; Tools</h2>
+                <ul id="tools">
+                    <li id="tech-stack"><p>Design: Blender, Photoshop, InDesign,XD</p></li>
+                    <li id="editing"><p>Editing: Davinci resolve, Premiere Pro</p></li>
+                    <li id="platforms"><p>Platforms:Windows</p></li>
+                    <li id="languages"><p>C#,C++,Python,Java, &amp; JavaScript</p></li>
+                    <li id="till"><p>PHP,HTML,CSS3</p></li>
+                </ul>
+                
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<section id="contact" class="contact section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title aos-init aos-animate" data-aos="fade-up">
+        <span class="description-title">Contact</span>
+        <h2>Contact</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div><!-- End Section Title -->
+
+      <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+
+        <!-- Contact Info Boxes -->
+        <div class="row gy-4 mb-5">
+          <div class="col-lg-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+            <div class="contact-info-box">
+              <div class="icon-box">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+              <div class="info-content">
+                <h4>Our Address</h4>
+                <p>1842 Maple Avenue, Portland, Oregon 97204</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+            <div class="contact-info-box">
+              <div class="icon-box">
+                <i class="bi bi-envelope"></i>
+              </div>
+              <div class="info-content">
+                <h4>Email Address</h4>
+                <p>info@example.com</p>
+                <p>contact@example.com</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+            <div class="contact-info-box">
+              <div class="icon-box">
+                <i class="bi bi-headset"></i>
+              </div>
+              <div class="info-content">
+                <h4>Hours of Operation</h4>
+                <p>Sunday-Fri: 9 AM - 6 PM</p>
+                <p>Saturday: 9 AM - 4 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Google Maps (Full Width) -->
+      <div class="map-section aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <!-- Contact Form Section (Overlapping) -->
+      <div class="container form-container-overlap">
+        <div class="row justify-content-center aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-lg-10">
+            <div class="contact-form-wrapper">
+              <h2 class="text-center mb-4">Get in Touch</h2>
+
+              <form action="forms/contact.php" method="post" class="php-email-form">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <div class="input-with-icon">
+                        <i class="bi bi-person"></i>
+                        <input type="text" class="form-control" name="name" placeholder="First Name" required="">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <div class="input-with-icon">
+                        <i class="bi bi-envelope"></i>
+                        <input type="email" class="form-control" name="email" placeholder="Email Address" required="">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="input-with-icon">
+                        <i class="bi bi-text-left"></i>
+                        <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="form-group">
+                      <div class="input-with-icon">
+                        <i class="bi bi-chat-dots message-icon"></i>
+                        <textarea class="form-control" name="message" placeholder="Write Message..." style="height: 180px" required=""></textarea>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                  </div>
+
+                  <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary btn-submit">SEND MESSAGE</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+    
+<section id="contact" class="contact section light-background">
+    <div class="col-lg-4 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="250">
+              <div class="awards-content">
+                <h3>Recognition &amp; Awards</h3>
+                <p>At enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </div>
+            </div>
+    <div class="col-lg-8 aos-init aos-animate" data-aos="fade-left" data-aos-delay="300">
+              <div class="awards-grid">
+                <div class="award-item">
+                  <div class="award-icon">
+                    <i class="bi bi-trophy-fill"></i>
+                  </div>
+                  <div class="award-details">
+                    <h4>Best Restaurant 2024</h4>
+                    <span>City Dining Awards</span>
+                  </div>
+                </div>
+                <div class="award-item">
+                  <div class="award-icon">
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <div class="award-details">
+                    <h4>5-Star Rating</h4>
+                    <span>Local Food Guide</span>
+                  </div>
+                </div>
+                <div class="award-item">
+                  <div class="award-icon">
+                    <i class="bi bi-gem"></i>
+                  </div>
+                  <div class="award-details">
+                    <h4>Excellence Award</h4>
+                    <span>Culinary Institute</span>
+                  </div>
+                </div>
+                <div class="award-item">
+                  <div class="award-icon">
+                    <i class="bi bi-heart-fill"></i>
+                  </div>
+                  <div class="award-details">
+                    <h4>Customer Choice</h4>
+                    <span>Community Favorite</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+       
+    
+
+</section>
+<section id="contact" class="contact section light-background">
+<div class="community-section aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+          <div class="row g-4">
+            <div class="col-lg-6 aos-init aos-animate" data-aos="fade-right" data-aos-delay="250">
+              <div class="community-card">
+                <div class="community-header">
+                  <div class="community-icon">
+                    <i class="bi bi-people-fill"></i>
+                  </div>
+                  <div>
+                    <h3>Community Involvement</h3>
+                    <p>Supporting local farmers and charities since 2015</p>
+                  </div>
+                </div>
+                <div class="community-stats">
+                  <div class="stat-row">
+                    <div class="stat-item">
+                      <span class="stat-number">$50K+</span>
+                      <span class="stat-label">Donated to Local Charities</span>
+                    </div>
+                    <div class="stat-item">
+                      <span class="stat-number">25+</span>
+                      <span class="stat-label">Local Farm Partners</span>
+                    </div>
+                  </div>
+                  <div class="stat-row">
+                    <div class="stat-item">
+                      <span class="stat-number">100+</span>
+                      <span class="stat-label">Community Events Hosted</span>
+                    </div>
+                    <div class="stat-item">
+                      <span class="stat-number">500+</span>
+                      <span class="stat-label">Volunteer Hours</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 aos-init aos-animate" data-aos="fade-left" data-aos-delay="300">
+              <div class="sustainability-card">
+                <div class="sustainability-header">
+                  <div class="sustainability-icon">
+                    <i class="bi bi-recycle"></i>
+                  </div>
+                  <div>
+                    <h3>Eco-Friendly Practices</h3>
+                    <p>Committed to sustainable dining and zero waste</p>
+                  </div>
+                </div>
+                <div class="sustainability-features">
+                  <div class="feature-item">
+                    <i class="bi bi-leaf-fill"></i>
+                    <span>100% Compostable Packaging</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="bi bi-water"></i>
+                    <span>Water Conservation Program</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="bi bi-lightning-fill"></i>
+                    <span>Renewable Energy Powered</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="bi bi-truck"></i>
+                    <span>Local Sourcing Priority</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+</section>
+<section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title aos-init aos-animate" data-aos="fade-up">
+        <span class="description-title">About</span>
+        <h2>About</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div><!-- End Section Title -->
+
+      <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up">
+            <div class="about-content">
+              <h2>Experience Our Unique Approach</h2>
+              <p class="fst-italic">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper.</p>
+              <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus porttitor.</p>
+
+              <div class="row mt-4">
+                <div class="col-md-6">
+                  <div class="feature-item aos-init aos-animate" data-aos="fade-up" data-aos-delay="150">
+                    <i class="bi bi-award"></i>
+                    <h4>Exceptional Service</h4>
+                    <p>Donec sed odio dui. Nulla vitae elit libero, a pharetra augue.</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="feature-item aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+                    <i class="bi bi-trophy"></i>
+                    <h4>Industry Recognition</h4>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="signature mt-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="250">
+                <p class="chef-name">Jane Smith, Head of Operations</p>
+                <img src="assets/img/misc/signature-1.webp" alt="Chef Signature" class="img-fluid">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+            <div class="about-gallery">
+              <div class="row g-3">
+                <div class="col-6">
+                  <img src="assets/img/restaurant/showcase-3.webp" class="img-fluid rounded" alt="Restaurant Image">
+                </div>
+                <div class="col-6">
+                  <img src="assets/img/restaurant/showcase-8.webp" class="img-fluid rounded" alt="Restaurant Image">
+                </div>
+                <div class="col-12 mt-3">
+                  <div class="years-badge">
+                    <span class="number">18</span>
+                    <span class="text">Years of Dedication</span>
+                  </div>
+                  <img src="assets/img/restaurant/showcase-6.webp" class="img-fluid rounded" alt="Restaurant Image">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+<section id="menu" class="menu section">
+
+      <!-- Section Title -->
+      <div class="container section-title aos-init aos-animate" data-aos="fade-up">
+        <span class="description-title">Menu</span>
+        <h2>Menu</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div>
+<!-- End Section Title -->
+
+      <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <div class="menu-filters isotope-filters mb-5 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+            <ul>
+              <li data-filter="*" class="filter-active">All Dishes</li>
+              <li data-filter="*" class="filter-starters&quot;">Appetizers</li>
+              <li data-filter="*" class="filter-main&quot;">Entrees</li>
+              <li data-filter="*" class="filter-dessert&quot;">Sweet Treats</li>
+              <li data-filter="*" class="filter-drinks&quot;">Beverages</li>
+            </ul>
+          </div>
+
+          <div class="menu-grid isotope-container row gy-5 aos-init aos-animate" data-aos="fade-up" data-aos-delay="300" style="position: relative; height: 3355.88px;">
+
+            <div class="col-xl-4 col-lg-6 isotope-item filter-starters" style="position: absolute; left: 0px; top: 0px;">
+              <div class="menu-card">
+                <div class="menu-card-image">
+                  <img src="assets/img/restaurant/starter-1.webp" alt="Appetizer" class="img-fluid">
+                  <div class="dietary-badges">
+                    <span class="badge-vegetarian">V</span>
+                  </div>
+                  <div class="price-overlay">$12.50</div>
+                </div>
+                <div class="menu-card-content">
+                  <h4>Prosciutto-Wrapped Asparagus</h4>
+                  <p>Vivamus tempor magna et tempus elementum. Sed consequat libero vel mauris cursus.</p>
+                  <div class="spice-level">
+                    <span class="spice-dot"></span>
+                    <span class="spice-dot"></span>
+                    <span class="spice-dot active"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-6 isotope-item filter-starters" style="position: absolute; left: 0px; top: 419.094px;">
+              <div class="menu-card">
+                <div class="menu-card-image">
+                  <img src="assets/img/restaurant/starter-3.webp" alt="Appetizer" class="img-fluid">
+                  <div class="dietary-badges">
+                    <span class="badge-seafood">SF</span>
+                  </div>
+                  <div class="price-overlay">$14.95</div>
+                </div>
+                <div class="menu-card-content">
+                  <h4>Seared Scallops with Cauliflower</h4>
+                  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac.</p>
+                  <div class="spice-level">
+                    <span class="spice-dot active"></span>
+                    <span class="spice-dot"></span>
+                    <span class="spice-dot"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-6 isotope-item filter-main" style="position: absolute; left: 0px; top: 838.188px;">
+              <div class="menu-card featured">
+                <div class="menu-card-image">
+                  <img src="assets/img/restaurant/main-2.webp" alt="Main Course" class="img-fluid">
+                  <div class="dietary-badges">
+                    <span class="badge-chef">Chef's Choice</span>
+                  </div>
+                  <div class="price-overlay">$28.00</div>
+                </div>
+                <div class="menu-card-content">
+                  <h4>Herb-Crusted Rack of Lamb</h4>
+                  <p>Mauris auctor nulla et felis tempor, eu consectetur ante vulputate non.</p>
+                  <div class="spice-level">
+                    <span class="spice-dot active"></span>
+                    <span class="spice-dot active"></span>
+                    <span class="spice-dot"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-6 isotope-item filter-main" style="position: absolute; left: 0px; top: 1260.41px;">
+              <div class="menu-card">
+                <div class="menu-card-image">
+                  <img src="assets/img/restaurant/main-6.webp" alt="Main Course" class="img-fluid">
+                  <div class="dietary-badges">
+                    <span class="badge-vegetarian">V</span>
+                    <span class="badge-gluten-free">GF</span>
+                  </div>
+                  <div class="price-overlay">$22.75</div>
+                </div>
+                <div class="menu-card-content">
+                  <h4>Quinoa Stuffed Bell Peppers</h4>
+                  <p>Donec vel nunc non erat vehicula cursus. Integer pharetra mauris vel lorem.</p>
+                  <div class="spice-level">
+                    <span class="spice-dot active"></span>
+                    <span class="spice-dot"></span>
+                    <span class="spice-dot"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-6 isotope-item filter-dessert" style="position: absolute; left: 0px; top: 1679.5px;">
+              <div class="menu-card">
+                <div class="menu-card-image">
+                  <img src="assets/img/restaurant/dessert-4.webp" alt="Dessert" class="img-fluid">
+                  <div class="dietary-badges">
+                    <span class="badge-signature">Signature</span>
+                  </div>
+                  <div class="price-overlay">$11.25</div>
+                </div>
+                <div class="menu-card-content">
+                  <h4>Salted Caramel Cheesecake</h4>
+                  <p>Cras fermentum odio eu feugiat luctus. Aliquam erat volutpat sed bibendum.</p>
+                  <div class="spice-level">
+                    <span class="spice-dot"></span>
+                    <span class="spice-dot"></span>
+                    <span class="spice-dot"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-6 isotope-item filter-dessert" style="position: absolute; left: 0px; top: 2098.59px;">
+              <div class="menu-card">
+                <div class="menu-card-image">
+                  <img src="assets/img/restaurant/dessert-9.webp" alt="Dessert" class="img-fluid">
+                  <div class="dietary-badges">
+                    <span class="badge-vegan">VG</span>
+                  </div>
+                  <div class="price-overlay">$9.50</div>
+                </div>
+                <div class="menu-card-content">
+                  <h4>Dark Chocolate Avocado Mousse</h4>
+                  <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere.</p>
+                  <div class="spice-level">
+                    <span class="spice-dot"></span>
+                    <span class="spice-dot"></span>
+                    <span class="spice-dot"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-6 isotope-item filter-drinks" style="position: absolute; left: 0px; top: 2517.69px;">
+              <div class="menu-card">
+                <div class="menu-card-image">
+                  <img src="assets/img/restaurant/drink-2.webp" alt="Beverage" class="img-fluid">
+                  <div class="dietary-badges">
+                    <span class="badge-alcoholic">21+</span>
+                  </div>
+                  <div class="price-overlay">$15.00</div>
+                </div>
+                <div class="menu-card-content">
+                  <h4>Elderflower Gin Fizz</h4>
+                  <p>Nulla facilisi morbi tempus iaculis urna id volutpat lacus laoreet non.</p>
+                  <div class="spice-level">
+                    <span class="spice-dot"></span>
+                    <span class="spice-dot"></span>
+                    <span class="spice-dot"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-6 isotope-item filter-drinks" style="position: absolute; left: 0px; top: 2936.78px;">
+              <div class="menu-card">
+                <div class="menu-card-image">
+                  <img src="assets/img/restaurant/drink-6.webp" alt="Beverage" class="img-fluid">
+                  <div class="dietary-badges">
+                    <span class="badge-fresh">Fresh</span>
+                  </div>
+                  <div class="price-overlay">$8.75</div>
+                </div>
+                <div class="menu-card-content">
+                  <h4>Tropical Green Smoothie</h4>
+                  <p>Ut pharetra sit amet aliquam id diam maecenas ultricies mi eget mauris.</p>
+                  <div class="spice-level">
+                    <span class="spice-dot"></span>
+                    <span class="spice-dot"></span>
+                    <span class="spice-dot"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="menu-actions aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+          <div class="row align-items-center">
+            <div class="col-md-8">
+              <div class="seasonal-notice">
+                <i class="bi bi-info-circle"></i>
+                <span>Our seasonal menu changes quarterly. Some items may vary based on ingredient availability.</span>
+              </div>
+            </div>
+            <div class="col-md-4 text-md-end">
+              <a href="#" class="menu-download-btn">
+                <i class="bi bi-download"></i>
+                <span>Full Menu PDF</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="chef-recommendations aos-init aos-animate" data-aos="fade-up" data-aos-delay="500">
+          <div class="section-header">
+            <h3><i class="bi bi-star-fill"></i> Today's Chef Recommendations</h3>
+            <p>Carefully curated dishes featuring the finest seasonal ingredients</p>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="recommendation-card">
+                <div class="recommendation-image">
+                  <img src="assets/img/restaurant/main-9.webp" alt="Chef Recommendation" class="img-fluid">
+                  <div class="chef-badge">
+                    <i class="bi bi-award"></i>
+                    <span>Chef's Pick</span>
+                  </div>
+                </div>
+                <div class="recommendation-content">
+                  <div class="recommendation-header">
+                    <h4>Pan-Seared Duck Breast</h4>
+                    <div class="recommendation-price">$34.50</div>
+                  </div>
+                  <p>Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum.</p>
+                  <div class="recommendation-details">
+                    <div class="serving-info">
+                      <i class="bi bi-clock"></i>
+                      <span>25 min preparation</span>
+                    </div>
+                    <div class="dietary-info">
+                      <span class="mini-badge gluten-free">GF</span>
+                      <span class="mini-badge dairy-free">DF</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="recommendation-card">
+                <div class="recommendation-image">
+                  <img src="assets/img/restaurant/main-8.webp" alt="Chef Recommendation" class="img-fluid">
+                  <div class="chef-badge">
+                    <i class="bi bi-award"></i>
+                    <span>Chef's Pick</span>
+                  </div>
+                </div>
+                <div class="recommendation-content">
+                  <div class="recommendation-header">
+                    <h4>Lobster Thermidor Risotto</h4>
+                    <div class="recommendation-price">$39.95</div>
+                  </div>
+                  <p>Fusce dapibus tellus ac cursus commodo tortor mauris condimentum nibh ut fermentum massa.</p>
+                  <div class="recommendation-details">
+                    <div class="serving-info">
+                      <i class="bi bi-clock"></i>
+                      <span>30 min preparation</span>
+                    </div>
+                    <div class="dietary-info">
+                      <span class="mini-badge seafood">SF</span>
+                      <span class="mini-badge premium">Premium</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+<section id="book-a-table" class="book-a-table section light-background">
+
+      <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+          <div class="col-12">
+            <div class="reservation-container">
+              <div class="row g-0">
+
+                <div class="col-lg-5 aos-init aos-animate" data-aos="fade-right" data-aos-delay="200">
+                  <div class="reservation-form-section">
+                    <div class="form-header text-center">
+                      <h3>Make a Reservation</h3>
+                      <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.</p>
+                    </div>
+
+                    <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form">
+                      <div class="row gy-3">
+                        <div class="col-12">
+                          <input type="text" name="name" class="form-control" placeholder="Full Name" required="">
+                        </div>
+                        <div class="col-12">
+                          <input type="email" class="form-control" name="email" placeholder="Email Address" required="">
+                        </div>
+                        <div class="col-12">
+                          <input type="tel" class="form-control" name="phone" placeholder="Phone Number" required="">
+                        </div>
+                        <div class="col-6">
+                          <input type="date" name="date" class="form-control" required="">
+                        </div>
+                        <div class="col-6">
+                          <input type="time" class="form-control" name="time" required="">
+                        </div>
+                        <div class="col-6">
+                          <select name="people" class="form-select" required="">
+                            <option value="">Guests</option>
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="5">5 Guests</option>
+                            <option value="6">6+ Guests</option>
+                          </select>
+                        </div>
+                        <div class="col-6">
+                          <select name="occasion" class="form-select">
+                            <option value="">Occasion</option>
+                            <option value="birthday">Birthday</option>
+                            <option value="anniversary">Anniversary</option>
+                            <option value="business">Business Dinner</option>
+                            <option value="date">Date Night</option>
+                            <option value="celebration">Celebration</option>
+                            <option value="other">Other</option>
+                          </select>
+                        </div>
+                        <div class="col-12">
+                          <textarea class="form-control" name="message" rows="3" placeholder="Special requests or dietary requirements"></textarea>
+                        </div>
+                      </div>
+
+                      <div class="my-3">
+                        <div class="loading">Loading</div>
+                        <div class="error-message"></div>
+                        <div class="sent-message">Your reservation request has been submitted successfully. We'll contact you shortly to confirm.</div>
+                      </div>
+
+                      <button type="submit" class="btn-reserve w-100">
+                        <i class="bi bi-calendar-check me-2"></i>
+                        Reserve Table
+                      </button>
+                    </form>
+                  </div>
+                </div>
+
+                <div class="col-lg-7 aos-init aos-animate" data-aos="fade-left" data-aos-delay="300">
+                  <div class="reservation-info-section">
+                    <div class="hero-image">
+                      <img src="assets/img/restaurant/showcase-2.webp" alt="Restaurant dining area" class="img-fluid">
+                      <div class="overlay-content">
+                        <h4>Experience Fine Dining</h4>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                      </div>
+                    </div>
+
+                    <div class="info-cards">
+                      <div class="row g-3">
+                        <div class="col-md-6 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="400">
+                          <div class="info-card">
+                            <div class="card-icon">
+                              <i class="bi bi-clock"></i>
+                            </div>
+                            <div class="card-content">
+                              <h5>Business Hours</h5>
+                              <p>Tuesday - Thursday: 5:00 PM - 10:00 PM<br>
+                                Friday - Saturday: 5:00 PM - 11:00 PM<br>
+                                Sunday: 4:00 PM - 9:00 PM<br>
+                                <em>Closed Mondays</em>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-md-6 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="450">
+                          <div class="info-card">
+                            <div class="card-icon">
+                              <i class="bi bi-geo-alt-fill"></i>
+                            </div>
+                            <div class="card-content">
+                              <h5>Find Us</h5>
+                              <p>4567 Elm Avenue, Floor 2<br>
+                                Chicago, IL 60614</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-md-6 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="500">
+                          <div class="info-card">
+                            <div class="card-icon">
+                              <i class="bi bi-telephone-fill"></i>
+                            </div>
+                            <div class="card-content">
+                              <h5>Reservations</h5>
+                              <p>+1 (312) 555-9876<br>
+                                <small>Available daily 2:00 PM - 9:00 PM</small>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-md-6 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="550">
+                          <div class="info-card">
+                            <div class="card-icon">
+                              <i class="bi bi-envelope-fill"></i>
+                            </div>
+                            <div class="card-content">
+                              <h5>Email Us</h5>
+                              <p>reservations@example.com<br>
+                                <small>Response within 24 hours</small>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="additional-info aos-init aos-animate" data-aos="fade-up" data-aos-delay="600">
+                      <div class="info-highlight">
+                        <i class="bi bi-star-fill"></i>
+                        <span>Recommended to book 2-3 days in advance for weekend dining</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+<footer id="footer" class="footer dark-background">
+
+    <div class="container">
+      <div class="row gy-5">
+
+        <div class="col-lg-4">
+          <div class="footer-content">
+            <a href="index.html" class="logo d-flex align-items-center mb-4">
+              <span class="sitename">ALPHMEGA UNIVERSE</span>
+            </a>
+            <p class="mb-4">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Donec velit neque auctor sit amet aliquam vel ullamcorper sit amet ligula.</p>
+
+            <div class="newsletter-form">
+              <h5>Stay Updated</h5>
+              <form action="forms/newsletter.php" method="post" class="php-email-form">
+                <div class="input-group">
+                  <input type="email" name="email" class="form-control" placeholder="Enter your email" required="">
+                  <button type="submit" class="btn-subscribe">
+                    <i class="bi bi-send"></i>
+                  </button>
+                </div>
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Thank you for subscribing!</div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6">
+          <div class="footer-links">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#"><i class="bi bi-chevron-right"></i> About</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i> Careers</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i> Press</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i> Blog</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i> Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6">
+          <div class="footer-links">
+            <h4>Solutions</h4>
+            <ul>
+              <li><a href="#"><i class="bi bi-chevron-right"></i> Digital Strategy</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i> Cloud Computing</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i> Data Analytics</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i> AI Solutions</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i> Cybersecurity</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="footer-contact">
+            <h4>Get in Touch</h4>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+              <div class="contact-info">
+                <p>2847 Maple Avenue<br>Los Angeles, CA 90210<br>United States</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bi bi-telephone"></i>
+              </div>
+              <div class="contact-info">
+                <p>+1 (555) 987-6543</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bi bi-envelope"></i>
+              </div>
+              <div class="contact-info">
+                <p>contact@example.com</p>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-twitter-x"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+              <a href="#"><i class="bi bi-youtube"></i></a>
+              <a href="#"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+   
+
+  </footer>
+<script src="assets/js/main.js"></script>
+
+<script src="assets/js/main.js"></script>
+</body></html>
